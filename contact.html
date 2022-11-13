@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JDecorations</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <style></style>
+</head>
+
+<body>
+  <nav class="navbar sticky-top navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">JDecorations</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="marriage.html">Marriage</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="backgrounds.html">Backgrounds</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="haldhi.html">Haldi</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="first_night.html">First Night</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="house.html">House</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="jd.html">Dandalu | Jadalu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+    <center>
+      <h1>Contact</h1>
+    </center>
+    <div class="form my-5 mx-5">
+      <form action="https://sheetdb.io/api/v1/eix79lssfbvu2" method="post" id="sheetdb-form">
+        <div class="form-group bg-blue">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name" name="data[name]" aria-describedby="emailHelp">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your details with anyone else.</small>
+        </div>
+        <div class="form-group">
+          <label for="mobile">Mobile</label>
+          <input type="text" class="form-control" name="data[mobile]" id="mobile">
+        </div>
+        <div class="form-group">
+          <label for="pid">PID</label>
+          <input type="text" class="form-control" name="data[pid]" id="pid">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+      <script>
+        var form = document.getElementById('sheetdb-form');
+        form.addEventListener("submit", e => {
+          e.preventDefault();
+          fetch(form.action, {
+            method: "POST",
+            body: new FormData(document.getElementById("sheetdb-form")),
+          }).then(
+            response => response.json()
+          ).then((html) => {
+            // you can put any JS code here
+            window.open('success.html', '_blank');
+            alert("Your order is placed we will contact you soon");
+          });
+        });
+      </script>
+    </div>
+
+  </main>
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+
+
+</body>
+
+</html>
